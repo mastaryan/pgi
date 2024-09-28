@@ -18,7 +18,6 @@ if (isset($_POST['Email'])) {
     if (
         !isset($_POST['Name']) ||
         !isset($_POST['Email']) ||
-        !isset($_POST['Phone']) ||
         !isset($_POST['Message'])
     ) {
         problem('We are sorry, but there appears to be a problem with the form you submitted.');
@@ -26,7 +25,6 @@ if (isset($_POST['Email'])) {
 
     $name = $_POST['Name']; // required
     $email = $_POST['Email']; // required
-    $email = $_POST['Phone']; // required
     $message = $_POST['Message']; // required
 
     $error_message = "";
@@ -60,7 +58,6 @@ if (isset($_POST['Email'])) {
 
     $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
-    $email_message .= "Phone: " . clean_string($phone) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
     // create email headers
