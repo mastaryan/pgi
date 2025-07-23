@@ -431,6 +431,7 @@ html .home-intro-secondary {
   to {opacity: 100}
 }
 
+/* Hiding text for SEO */
 .visually-hidden {
 	position: absolute;
 	width: 1px;
