@@ -70,7 +70,7 @@ html .home-intro-secondary {
 		height: 3.25em;
 		left: 0;
 		line-height: 3.25em;
-		position: fixed;
+		position: sticky;
 		text-align: right;
 		top: 0;
 		width: 100%;
@@ -149,7 +149,7 @@ html .home-intro-secondary {
 	@media screen and (max-width: 980px) {
 
 		body {
-			padding-top: 44px;
+			padding-top: 0;
 		}
 
 		#header {
