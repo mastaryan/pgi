@@ -1,1 +1,448 @@
-PCFET0NUWVBFIGh0bWw+Cgo8aHRtbCBsYW5nPSJlbiI+CjxoZWFkPgogIDx0aXRsZT5JbnN1cmFuY2UgQ29tcGFuaWVzIGluIFNvbWVyc2V0IEtZIHwgR3J1bmR5IEluc3VyYW5jZSBQYXJ0bmVyczwvdGl0bGU+CiAgCiAgPCEtLSBHb29nbGUgVGFnIE1hbmFnZXIgLS0+CjxzY3JpcHQ+KGZ1bmN0aW9uICh3LCBkLCBzLCBsLCBpKSB7CiAgICAgIHdbbF0gPSB3W2xdIHx8IFtdOyB3W2xdLnB1c2goewogICAgICAgICdndG0uc3RhcnQnOgogICAgICAgICAgbmV3IERhdGUoKS5nZXRUaW1lKCksIGV2ZW50OiAnZ3RtLmpzJwogICAgICB9KTsgdmFyIGYgPSBkLmdldEVsZW1lbnRzQnlUYWdOYW1lKHMpWzBdLAogICAgICAgIGogPSBkLmNyZWF0ZUVsZW1lbnQocyksIGRsID0gbCAhPSAnZGF0YUxheWVyJyA/ICcmbD0nICsgbCA6ICcnOyBqLmFzeW5jID0gdHJ1ZTsgai5zcmMgPQogICAgICAgICAgJ2h0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0bS5qcz9pZD0nICsgaSArIGRsOyBmLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGosIGYpOwogICAgfSkod2luZG93LCBkb2N1bWVudCwgJ3NjcmlwdCcsICdkYXRhTGF5ZXInLCAnR1RNLVRWUTlaVjVLJyk7PC9zY3JpcHQ+CjwhLS0gRW5kIEdvb2dsZSBUYWcgTWFuYWdlciAtLT4KPCEtLSBCYXNpYyBNZXRhIFRhZ3MgLS0+CjxtZXRhIGNoYXJzZXQ9InV0Zi04Ii8+CjxtZXRhIGNvbnRlbnQ9IklFPWVkZ2UiIGh0dHAtZXF1aXY9IlgtVUEtQ29tcGF0aWJsZSIvPgo8bWV0YSBjb250ZW50PSJQaGlsIEdydW5keSBJbnN1cmFuY2UgaW4gU29tZXJzZXQsIEtZIHBhcnRuZXJzIHdpdGggdHJ1c3RlZCBwcm92aWRlcnMgdG8gb2ZmZXIgcmVsaWFibGUgaGVhbHRoLCBsaWZlLCBhbmQgZ3JvdXAgaW5zdXJhbmNlIHNlcnZpY2VzLiBFeHBsb3JlIG91ciBwYXJ0bmVyc2hpcHMgLi4uIiBuYW1lPSJkZXNjcmlwdGlvbiIvPgo8bWV0YSBjb250ZW50PSJQaGlsIEdydW5keSBJbnN1cmFuY2UsIFNvbWVyc2V0IEtZIiBuYW1lPSJhdXRob3IiLz4KPG1ldGEgY29udGVudD0iUGhpbCBHcnVuZHkgSW5zdXJhbmNlLCBBbnRoZW0gSW5zdXJhbmNlLCBVbml0ZWQgSGVhbHRoIEluc3VyYW5jZSwgS1kgTGVhZ3VlIG9mIENpdGllcyBJbnN1cmFuY2UsIGhlYWx0aCBpbnN1cmFuY2UsIGxpZmUgaW5zdXJhbmNlLCBidXNpbmVzcyBpbnN1cmFuY2UsIE1lZGljYXJlIGluc3VyYW5jZSwgIEtZTkVDVCwgS1kgSW5zdXJhbmNlIFByb3ZpZGVyLCBHcnVuZHkgSW5zdXJhbmNlLE1lZGljYWlkIGluc3VyYW5jZSwgZ3JvdXAgaW5zdXJhbmNlLCBpbnN1cmFuY2UgcHJvdmlkZXJzIFNvbWVyc2V0IEtZLCBLZW50dWNreSBpbnN1cmFuY2UsIHRydXN0ZWQgaW5zdXJhbmNlIHByb3ZpZGVycyIgbmFtZT0ia2V5d29yZHMiLz4KPCEtLSBPcGVuIEdyYXBoIE1ldGEgVGFncyAoU29jaWFsIE1lZGlhIFNoYXJpbmcpIC0tPgo8bWV0YSBjb250ZW50PSJQYXJ0bmVyIENvbXBhbmllcyAtIFBoaWwgR3J1bmR5IEluc3VyYW5jZSIgcHJvcGVydHk9Im9nOnRpdGxlIi8+CjxtZXRhIGNvbnRlbnQ9IkV4cGxvcmUgdHJ1c3RlZCBpbnN1cmFuY2UgcGFydG5lcnMgaW4gaGVhbHRoLCBsaWZlLCBhbmQgZ3JvdXAgaW5zdXJhbmNlIHdpdGggUGhpbCBHcnVuZHkgSW5zdXJhbmNlLCBTb21lcnNldCwgS1kuIiBwcm9wZXJ0eT0ib2c6ZGVzY3JpcHRpb24iLz4KPG1ldGEgY29udGVudD0iaW1nL3BnaWxvZ28ucG5nIiBwcm9wZXJ0eT0ib2c6aW1hZ2UiLz4KPG1ldGEgY29udGVudD0iaHR0cHM6Ly9ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiIHByb3BlcnR5PSJvZzp1cmwiLz4KPG1ldGEgY29udGVudD0id2Vic2l0ZSIgcHJvcGVydHk9Im9nOnR5cGUiLz4KPCEtLSBDYW5vbmljYWwgLS0+CjxsaW5rIHJlbD0iY2Fub25pY2FsIiBocmVmPSJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiPgogIAo8IS0tIE9wZW4gR3JhcGggLS0+CjxtZXRhIHByb3BlcnR5PSJvZzp0eXBlIiBjb250ZW50PSJ3ZWJzaXRlIj4KPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJJbnN1cmFuY2UgQ29tcGFuaWVzIGluIFNvbWVyc2V0IEtZIHwgR3J1bmR5IEluc3VyYW5jZSBQYXJ0bmVycyI+CjxtZXRhIHByb3BlcnR5PSJvZzpkZXNjcmlwdGlvbiIgY29udGVudD0iRXhwbG9yZSB0cnVzdGVkIGluc3VyYW5jZSBjb21wYW5pZXMgaW4gU29tZXJzZXQgS1kgdGhyb3VnaCBHcnVuZHkgSW5zdXJhbmNlJ3Mgc3Ryb25nIHBhcnRuZXJzaGlwcy4iPgo8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiPgo8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHBzOi8vd3d3LmdydW5keWluc3VyYW5jZS5uZXQvYXNzZXRzL29nLWRlZmF1bHQuanBnIj4KPCEtLSBGYXZpY29uIC0tPgo8bGluayBocmVmPSJpbWcvZmF2aWNvbi5pY28iIHJlbD0ic2hvcnRjdXQgaWNvbiIgdHlwZT0iaW1hZ2UveC1pY29uIi8+CjxsaW5rIGhyZWY9ImltZy9hcHBsZS10b3VjaC1pY29uLnBuZyIgcmVsPSJhcHBsZS10b3VjaC1pY29uIi8+CjwhLS0gTWV0YSBkZXNjcmlwdGlvbiB1c2luZyB0YXJnZXQga2V5d29yZCAtLT4KPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkZpbmQgdGhlIHRvcCBpbnN1cmFuY2UgY29tcGFuaWVzIGluIFNvbWVyc2V0IEtZIHdpdGggR3J1bmR5IEluc3VyYW5jZS4gV2UgcGFydG5lciB3aXRoIHRydXN0ZWQgY2FycmllcnMgdG8gcHJvdmlkZSBhdXRvLCBob21lLCBsaWZlLCBhbmQgYnVzaW5lc3MgaW5zdXJhbmNlLiI+CjwhLS0gTW9iaWxlIE1ldGFzIC0tPgo8bWV0YSBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgbmFtZT0idmlld3BvcnQiLz4KPCEtLSBXZWIgRm9udHMgIC0tPgo8bGluayBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU9wZW4rU2Fuczp3Z2h0QDMwMDs0MDA7NjAwOzcwMDs4MDAmZmFtaWx5PVNoYWRvd3MrSW50bytMaWdodCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+CjwhLS0gVmVuZG9yIENTUyAtLT4KPGxpbmsgaHJlZj0idmVuZG9yL2Jvb3RzdHJhcC9jc3MvYm9vdHN0cmFwLm1pbi5jc3MiIHJlbD0ic3R5bGVzaGVldCIvPgo8bGluayBocmVmPSJ2ZW5kb3IvZm9udC1hd2Vzb21lL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ii8+CjxsaW5rIGhyZWY9InZlbmRvci9zaW1wbGUtbGluZS1pY29ucy9jc3Mvc2ltcGxlLWxpbmUtaWNvbnMubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ii8+CjxsaW5rIGhyZWY9InZlbmRvci9vd2wuY2Fyb3VzZWwvYXNzZXRzL293bC5jYXJvdXNlbC5taW4uY3NzIiByZWw9InN0eWxlc2hlZXQiLz4KPGxpbmsgaHJlZj0idmVuZG9yL293bC5jYXJvdXNlbC9hc3NldHMvb3dsLnRoZW1lLmRlZmF1bHQubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ii8+CjxsaW5rIGhyZWY9InZlbmRvci9tYWduaWZpYy1wb3B1cC9tYWduaWZpYy1wb3B1cC5taW4uY3NzIiByZWw9InN0eWxlc2hlZXQiLz4KPCEtLSBUaGVtZSBDU1MgLS0+CjxsaW5rIGhyZWY9ImNzcy90aGVtZS5jc3MiIHJlbD0ic3R5bGVzaGVldCIvPgo8bGluayBocmVmPSJjc3MvdGhlbWUtZWxlbWVudHMuY3NzIiByZWw9InN0eWxlc2hlZXQiLz4KPGxpbmsgaHJlZj0iY3NzL3RoZW1lLWFuaW1hdGUuY3NzIiByZWw9InN0eWxlc2hlZXQiLz4KPCEtLSBDdXJyZW50IFBhZ2UgQ1NTIC0tPgo8bGluayBocmVmPSJ2ZW5kb3IvcnMtcGx1Z2luL2Nzcy9zZXR0aW5ncy5jc3MiIG1lZGlhPSJzY3JlZW4iIHJlbD0ic3R5bGVzaGVldCIvPgo8bGluayBocmVmPSJ2ZW5kb3IvcnMtcGx1Z2luL2Nzcy9sYXllcnMuY3NzIiBtZWRpYT0ic2NyZWVuIiByZWw9InN0eWxlc2hlZXQiLz4KPGxpbmsgaHJlZj0idmVuZG9yL3JzLXBsdWdpbi9jc3MvbmF2aWdhdGlvbi5jc3MiIG1lZGlhPSJzY3JlZW4iIHJlbD0ic3R5bGVzaGVldCIvPgo8bGluayBocmVmPSJ2ZW5kb3IvY2lyY2xlLWZsaXAtc2xpZGVzaG93L2Nzcy9jb21wb25lbnQuY3NzIiBtZWRpYT0ic2NyZWVuIiByZWw9InN0eWxlc2hlZXQiLz4KPCEtLSBTa2luIENTUyAtLT4KPGxpbmsgaHJlZj0iY3NzL3NraW5zL3NraW4tY29ycG9yYXRlLTYuY3NzIiByZWw9InN0eWxlc2hlZXQiLz4KPCEtLSBIZWFkIExpYnMgLS0+CjxzY3JpcHQgc3JjPSJib290c3RyYXAvanMvanF1ZXJ5LmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0idmVuZG9yL21vZGVybml6ci9tb2Rlcm5penIubWluLmpzIj48L3NjcmlwdD4KPGxpbmsgaHJlZj0iYm9vdHN0cmFwL2Nzcy9ib290c3RyYXAuY3NzIiByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIi8+CjwhLS0gVGhlbWUgQ3VzdG9tIENTUyAtLT4KPGxpbmsgaHJlZj0iY3NzL2N1c3RvbS5jc3MiIHJlbD0ic3R5bGVzaGVldCIvPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogICAgLmNvbnRhaW5lcjEgewogICAgICBvdXRsaW5lOiAxcHggZGFzaGVkICM5OTk7CiAgICB9CgogICAgLmNvbnRhaW5lcjEgewogICAgICB3aWR0aDogMTE3MHB4ICFpbXBvcnRhbnQ7CiAgICB9CgogICAgLmNvbnRhaW5lci1mbHVpZDEgewogICAgICBvdXRsaW5lOiAxcHggZGFzaGVkICM5OTk7CiAgICB9CgogICAgLnJvdzEgewogICAgICBtYXJnaW4tbGVmdDogLTIwcHg7CiAgICB9CiAgPC9zdHlsZT4KPGxpbmsgaHJlZj0iYm9vdHN0cmFwL2Nzcy9ib290c3RyYXAtcmVzcG9uc2l2ZS5jc3MiIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiLz4KPHNjcmlwdCBzcmM9ImJvb3RzdHJhcC9qcy9ib290c3RyYXAubWluLmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pgo8bGluayBocmVmPSJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiIHJlbD0iY2Fub25pY2FsIi8+PHNjcmlwdCB0eXBlPSJhcHBsaWNhdGlvbi9sZCtqc29uIj57CiAgIkBjb250ZXh0IjogImh0dHBzOi8vc2NoZW1hLm9yZyIsCiAgIkB0eXBlIjogIkluc3VyYW5jZUFnZW5jeSIsCiAgIm5hbWUiOiAiR3J1bmR5IEluc3VyYW5jZSIsCiAgInVybCI6ICJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiLAogICJ0ZWxlcGhvbmUiOiAiKzEtNjA2LTY3OS0wMTU4IiwKICAiZmF4TnVtYmVyIjogIisxLTYwNi02NzktMTIzNCIsCiAgImVtYWlsIjogImtyb3NzQGdydW5keWluc3VyYW5jZS5uZXQiLAogICJhcmVhU2VydmVkIjogIktZIiwKICAiYWRkcmVzcyI6IHsKICAgICJAdHlwZSI6ICJQb3N0YWxBZGRyZXNzIiwKICAgICJzdHJlZXRBZGRyZXNzIjogIjEwNCBOIENlbnRyYWwgQXZlIiwKICAgICJhZGRyZXNzTG9jYWxpdHkiOiAiU29tZXJzZXQiLAogICAgImFkZHJlc3NSZWdpb24iOiAiS1kiLAogICAgInBvc3RhbENvZGUiOiAiNDI1MDMiLAogICAgImFkZHJlc3NDb3VudHJ5IjogIlVTIgogIH0sCiAgImdlbyI6IHsKICAgICJAdHlwZSI6ICJHZW9Db29yZGluYXRlcyIsCiAgICAibGF0aXR1ZGUiOiAzNy4wOTIsCiAgICAibG9uZ2l0dWRlIjogLTg0LjYwNAogIH0sCiAgIm9wZW5pbmdIb3VycyI6ICJNby1GciAwOTowMC0xNzowMCIsCiAgInNhbWVBcyI6IFsKICAgICJodHRwczovL3d3dy5mYWNlYm9vay5jb20vZ3J1bmR5aW5zdXJhbmNlIiwKICAgICJodHRwczovL3d3dy5nb29nbGUuY29tL21hcHMvcGxhY2UvMTA0K04rQ2VudHJhbCtBdmUsK1NvbWVyc2V0LCtLWSs0MjUwMyIKICBdCn08L3NjcmlwdD48c2NyaXB0IHR5cGU9ImFwcGxpY2F0aW9uL2xkK2pzb24iPnsKICAiQGNvbnRleHQiOiAiaHR0cHM6Ly9zY2hlbWEub3JnIiwKICAiQHR5cGUiOiAiQnJlYWRjcnVtYkxpc3QiLAogICJpdGVtTGlzdEVsZW1lbnQiOiBbCiAgICB7CiAgICAgICJAdHlwZSI6ICJMaXN0SXRlbSIsCiAgICAgICJwb3NpdGlvbiI6IDEsCiAgICAgICJuYW1lIjogIkhvbWUiLAogICAgICAiaXRlbSI6ICJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0LyIKICAgIH0sCiAgICB7CiAgICAgICJAdHlwZSI6ICJMaXN0SXRlbSIsCiAgICAgICJwb3NpdGlvbiI6IDIsCiAgICAgICJuYW1lIjogIlBnaSIsCiAgICAgICJpdGVtIjogImh0dHBzOi8vd3d3LmdydW5keWluc3VyYW5jZS5uZXQvIgogICAgfSwKICAgIHsKICAgICAgIkB0eXBlIjogIkxpc3RJdGVtIiwKICAgICAgInBvc2l0aW9uIjogMywKICAgICAgIm5hbWUiOiAiT3VyIEluc3VyYW5jZSBQcm92aWRlcnMuSHRtbCIsCiAgICAgICJpdGVtIjogImh0dHBzOi8vd3d3LmdydW5keWluc3VyYW5jZS5uZXQvb3VyLWluc3VyYW5jZS1wcm92aWRlcnMuaHRtbC8iCiAgICB9CiAgXQp9PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJhcHBsaWNhdGlvbi9sZCtqc29uIj4KICB7CiAgICAiQGNvbnRleHQiOiAiaHR0cHM6Ly9zY2hlbWEub3JnIiwKICAgICJAdHlwZSI6ICJCcmVhZGNydW1iTGlzdCIsCiAgICAiaXRlbUxpc3RFbGVtZW50IjogWwogICAgICB7CiAgICAgICAgIkB0eXBlIjogIkxpc3RJdGVtIiwKICAgICAgICAicG9zaXRpb24iOiAxLAogICAgICAgICJuYW1lIjogIkhvbWUiLAogICAgICAgICJpdGVtIjogImh0dHBzOi8vd3d3LmdydW5keWluc3VyYW5jZS5uZXQvIgogICAgICB9LAogICAgICB7CiAgICAgICAgIkB0eXBlIjogIkxpc3RJdGVtIiwKICAgICAgICAicG9zaXRpb24iOiAyLAogICAgICAgICJuYW1lIjogIlBhcnRuZXJzIiwKICAgICAgICAiaXRlbSI6ICJodHRwczovL3d3dy5ncnVuZHlpbnN1cmFuY2UubmV0L291ci1pbnN1cmFuY2UtcHJvdmlkZXJzLmh0bWwiCiAgICAgIH0KICAgIF0KICB9CiAgPC9zY3JpcHQ+CjxzY3JpcHQ+CihmdW5jdGlvbihkKXsKICB2YXIgcyA9IGQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgcy5zcmM9J2h0dHBzOi8vY2RuLnVzZXJ3YXkub3JnL3dpZGdldC5qcyc7CiAgcy5zZXRBdHRyaWJ1dGUoJ2RhdGEtYWNjb3VudCcsICdrRTdIaFpmVTVCJyk7CiAgcy5hc3luYyA9IHRydWU7CiAgZC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnaGVhZCcpWzBdLmFwcGVuZENoaWxkKHMpOwp9KShkb2N1bWVudCkKPC9zY3JpcHQ+Cgo8c2NyaXB0IGRhdGEtYWNjb3VudD0ia0U3SGhaZlU1QiIgc3JjPSJodHRwczovL2Nkbi51c2Vyd2F5Lm9yZy93aWRnZXQuanMiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5Pgo8IS0tIEdvb2dsZSBUYWcgTWFuYWdlciAobm9zY3JpcHQpIC0tPgo8bm9zY3JpcHQ+PGlmcmFtZSBoZWlnaHQ9IjAiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vbnMuaHRtbD9pZD1HVE0tVFZROVpWNUsiIHN0eWxlPSJkaXNwbGF5Om5vbmU7dmlzaWJpbGl0eTpoaWRkZW4iIHdpZHRoPSIwIj48L2lmcmFtZT48L25vc2NyaXB0Pgo8IS0tIEVuZCBHb29nbGUgVGFnIE1hbmFnZXIgKG5vc2NyaXB0KSAtLT4KPCEtLSBPcGVuIEVucm9sbG1lbnQgYmFubmVyIChyZW1vdmUgYWZ0ZXIgSmFuIDIwMjcpIC0tPgo8ZGl2IGlkPSJvZS1iYW5uZXIiIHN0eWxlPSJiYWNrZ3JvdW5kOiMwMDU0OEU7Y29sb3I6I2ZmZjt0ZXh0LWFsaWduOmNlbnRlcjtwYWRkaW5nOjEwcHggNDVweCAxMHB4IDE1cHg7Zm9udC1zaXplOjE1cHg7cG9zaXRpb246cmVsYXRpdmU7ei1pbmRleDoxMDAwO2xpbmUtaGVpZ2h0OjEuNDsiPgogIDxzdHJvbmc+T3BlbiBFbnJvbGxtZW50IHN0YXJ0cyBPY3RvYmVyIDE1dGg8L3N0cm9uZz4gJm1kYXNoOyBDb21wYXJlIEt5bmVjdCBoZWFsdGggcGxhbnMgZm9yIDIwMjcgd2l0aCBhIGxvY2FsIFNvbWVyc2V0IGV4cGVydCwgZnJlZS4KICA8YSBocmVmPSJreW5lY3QuaHRtbCIgc3R5bGU9ImNvbG9yOiNmZmY7dGV4dC1kZWNvcmF0aW9uOnVuZGVybGluZTtmb250LXdlaWdodDpib2xkO3doaXRlLXNwYWNlOm5vd3JhcDsiPkdldCBmcmVlIGVucm9sbG1lbnQgaGVscCAmcmFycjs8L2E+CiAgPGJ1dHRvbiBvbmNsaWNrPSJkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb2UtYmFubmVyJykuc3R5bGUuZGlzcGxheT0nbm9uZSciIGFyaWEtbGFiZWw9IkRpc21pc3MgYW5ub3VuY2VtZW50IiBzdHlsZT0icG9zaXRpb246YWJzb2x1dGU7cmlnaHQ6MTJweDt0b3A6NTAlO3RyYW5zZm9ybTp0cmFuc2xhdGVZKC01MCUpO2JhY2tncm91bmQ6bm9uZTtib3JkZXI6bm9uZTtjb2xvcjojZmZmO2ZvbnQtc2l6ZToyMnB4O2N1cnNvcjpwb2ludGVyO2xpbmUtaGVpZ2h0OjE7Ij4mdGltZXM7PC9idXR0b24+CjwvZGl2Pgo8IS0tIFNjaGVtYSBNYXJrdXAgLS0+CjxkaXYgY2xhc3M9ImJvZHkiPgo8aGVhZGVyPgo8IS0tIEhlYWRlciAtLT4KPGhlYWRlciBjbGFzcz0iYWx0IiBpZD0iaGVhZGVyIj4KPGgxPjxhIGhyZWY9ImluZGV4Lmh0bWwiPjxpbWcgYWx0PSJQaGlsIEdydW5keSBJbnN1cmFuY2UiIGhlaWdodD0iNTciIHNyYz0iaW1nL3BnaWxvZ28ucG5nIiB3aWR0aD0iNDAwIi8+PC9hPgo8c3BhbiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5JbnN1cmFuY2UgY29tcGFueSBwYXJ0bmVycyBvZiBQaGlsIEdydW5keSBJbnN1cmFuY2U8L3NwYW4+CjwvaDE+CjxhIGhyZWY9IiNuYXYiPjxpIGNsYXNzPSJmYSBmYS1iYXJzIj48L2k+IE1lbnU8L2E+CjwvaGVhZGVyPgo8IS0tIE5hdiAtLT4KPG5hdiBpZD0ibmF2Ij4KPHVsIGNsYXNzPSJsaW5rcyI+CjxsaT48YSBocmVmPSJpbmRleC5odG1sIj5Ib21lPC9hPjwvbGk+CjxsaT48YSBocmVmPSJpbnN1cmFuY2UuaHRtbCI+SW5zdXJhbmNlIFdlIE9mZmVyPC9hPjwvbGk+CjxsaT48YSBocmVmPSJreW5lY3QuaHRtbCI+S3luZWN0PC9hPjwvbGk+CjxsaT48YSBocmVmPSJncm91cC5odG1sIj5Hcm91cCBJbnN1cmFuY2U8L2E+PC9saT4KPGxpPjxhIGhyZWY9ImFib3V0Lmh0bWwiPkFib3V0IFVzPC9hPjwvbGk+CjxsaT48YSBocmVmPSJvdXItaW5zdXJhbmNlLXByb3ZpZGVycy5odG1sIj5QYXJ0bmVyIENvbXBhbmllczwvYT48L2xpPgo8bGk+PGEgaHJlZj0ic3RhZmYuaHRtbCI+T3VyIFRlYW08L2E+PC9saT4KPGxpPjxhIGhyZWY9ImNvbnRhY3QuaHRtbCI+Q29udGFjdDwvYT48L2xpPgo8L3VsPgo8L25hdj4KPC9oZWFkZXI+PC9kaXY+CjxkaXYgY2xhc3M9Im1haW4iIHJvbGU9Im1haW4iPgo8c2VjdGlvbiBjbGFzcz0icGFnZS1oZWFkZXIiPgo8ZGl2IGNsYXNzPSJjb250YWluZXIiPgo8ZGl2IGNsYXNzPSJyb3ciPgo8ZGl2IGNsYXNzPSJjb2wtbWQtMTIiPgo8aDI+UGFydG5lciBDb21wYW5pZXM8L2gyPgo8L2Rpdj4KPC9kaXY+CjwvZGl2Pgo8L3NlY3Rpb24+CjxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CjxkaXYgY2xhc3M9ImNvbC1tZC0xMiI+CjxwPlBoaWwgR3J1bmR5IEluc3VyYW5jZSBwYXJ0bmVycyB3aXRoIGEgY2FyZWZ1bGx5IHNlbGVjdGVkIGdyb3VwIG9mIHRvcC1yYXRlZCBpbnN1cmFuY2UgY29tcGFuaWVzIHRoYXQgc2VydmUKICAgICAgICAgIGluZGl2aWR1YWxzLCBmYW1pbGllcywgYW5kIGJ1c2luZXNzZXMgdGhyb3VnaG91dCBLZW50dWNreS4gT3VyIGdvYWwgaXMgdG8gcHJvdmlkZSB5b3Ugd2l0aCByZWxpYWJsZSBhbmQKICAgICAgICAgIGFmZm9yZGFibGUgaW5zdXJhbmNlIHNvbHV0aW9uc+KAlHdoZXRoZXIgeW91IG5lZWQgaGVhbHRoLCBsaWZlLCBkZW50YWwsIGdyb3VwLCBvciBzdXBwbGVtZW50YWwgY292ZXJhZ2UuIFdlJ3JlCiAgICAgICAgICBwcm91ZCB0byB3b3JrIHdpdGggbmF0aW9uYWwgYW5kIHJlZ2lvbmFsIHByb3ZpZGVycyB0byBicmluZyBwZWFjZSBvZiBtaW5kIHRvIFNvbWVyc2V0IGFuZCB0aGUgc3Vycm91bmRpbmcKICAgICAgICAgIGNvbW11bml0aWVzLjwvcD4KPHA+V2UgYXJlIGFsc28gcHJvdWQgbWVtYmVycyBvZiB0aGUgPGEgaHJlZj0iaHR0cHM6Ly9zb21lcnNldHB1bGFza2ljaGFtYmVyLmNvbS8iIHJlbD0ibm9vcGVuZXIiIHRhcmdldD0iX2JsYW5rIj5Tb21lcnNldCBQdWxhc2tpIENoYW1iZXIgb2YgQ29tbWVyY2U8L2E+LjwvcD4KPHA+wqA8L3A+CjwvZGl2Pgo8L2Rpdj4KPC9kaXY+CjxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CjxkaXYgY2xhc3M9InJvdyBtYi14bCBjZW50ZXIiPgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPjxhIGhyZWY9Imh0dHBzOi8vd3d3LmFudGhlbS5jb20vIj48aW1nIGFsdD0iQW50aGVtIGhlYWx0aCBpbnN1cmFuY2UgcGFydG5lciBTb21lcnNldCBLZW50dWNreSIgc3JjPSJpbWcvbG9nb3MvYW50aGVtLnBuZyIvPjwvYT4KPGRpdiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5BbnRoZW0gb2ZmZXJzIHRydXN0ZWQgaGVhbHRoIGluc3VyYW5jZSBvcHRpb25zIGFjcm9zcyBLZW50dWNreS4gUGhpbCBHcnVuZHkKICAgICAgICAgIEluc3VyYW5jZSBpcyBwcm91ZCB0byBiZSBhIGxpY2Vuc2VkIGFnZW50IGhlbHBpbmcgeW91IGFjY2VzcyBBbnRoZW0gY292ZXJhZ2UgcGxhbnMgaW4gU29tZXJzZXQgYW5kIGJleW9uZC4KICAgICAgICA8L2Rpdj4KPC9wPgo8cD5BbnRoZW08L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwOi8vd3d3LnVoYy5jb20vIj48aW1nIGFsdD0iVW5pdGVkIEhlYWx0aCBDYXJlIEtlbnR1Y2t5IHBhcnRuZXIiIHNyYz0iaW1nL2xvZ29zL3VoYy5wbmciLz48L2E+CjxkaXYgY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+VW5pdGVkIEhlYWx0aCBDYXJlIHBhcnRuZXJzIHdpdGggUGhpbCBHcnVuZHkgSW5zdXJhbmNlIHRvIG9mZmVyIGFmZm9yZGFibGUgYW5kCiAgICAgICAgICBjb21wcmVoZW5zaXZlIG1lZGljYWwgY292ZXJhZ2Ugb3B0aW9ucyB0byBLZW50dWNreSByZXNpZGVudHMuPC9kaXY+CjwvcD4KPHA+VW5pdGVkIEhlYWx0aCBDYXJlPC9wPgo8L2Rpdj4KPGRpdiBjbGFzcz0iY29sLXNtLTMiPgo8cD4gPGEgaHJlZj0iaHR0cHM6Ly93d3cuY2FyZXNvdXJjZS5jb20vIj48aW1nIGFsdD0iQ2FyZSBTb3VyY2UgaGVhbHRoIGluc3VyYW5jZSBLZW50dWNreSIgc3JjPSJpbWcvbG9nb3MvY2FyZXNvdXJjZS5wbmciLz48L2E+CjxkaXYgY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+Q2FyZVNvdXJjZSBpcyBhIG5vbnByb2ZpdCBtYW5hZ2VkIGhlYWx0aCBjYXJlIHByb3ZpZGVyIHNlcnZpbmcgaW5kaXZpZHVhbHMgYW5kCiAgICAgICAgICBmYW1pbGllcyBpbiBLZW50dWNreS4gRmluZCBDYXJlU291cmNlIHBsYW5zIHRocm91Z2ggUGhpbCBHcnVuZHkgSW5zdXJhbmNlLjwvZGl2Pgo8L3A+CjxwPkNhcmUgU291cmNlPC9wPgo8L2Rpdj4KPGRpdiBjbGFzcz0iY29sLXNtLTMiPgo8cD4gPGEgaHJlZj0iaHR0cHM6Ly93d3cuYW5nbGVoZWFsdGguY29tLyI+PGltZyBhbHQ9IkFuZ2xlIEhlYWx0aCBJbnN1cmFuY2UgS2VudHVja3kiIHNyYz0iaW1nL2xvZ29zL2FuZ2xlLnBuZyIvPjwvYT4KPGRpdiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5BbmdsZSBIZWFsdGggZGVsaXZlcnMgZGlnaXRhbC1maXJzdCBoZWFsdGggcGxhbnMgZm9yIG1vZGVybiBpbmRpdmlkdWFscyBhbmQKICAgICAgICAgIGJ1c2luZXNzZXMuIFBoaWwgR3J1bmR5IEluc3VyYW5jZSBoZWxwcyBjbGllbnRzIGluIEtlbnR1Y2t5IGNvbm5lY3Qgd2l0aCBBbmdsZSBIZWFsdGggb3B0aW9ucy48L2Rpdj4KPC9wPgo8cD5BbmdsZSBIZWFsdGg8L3A+CjwvZGl2Pgo8L2Rpdj4KPGRpdiBjbGFzcz0icm93IG1iLXhsIGNlbnRlciI+CjxkaXYgY2xhc3M9ImNvbC1zbS0zIj4KPHA+IDxhIGhyZWY9Imh0dHBzOi8vd3d3LmRlbHRhZGVudGFsLmNvbS8iPjxpbWcgYWx0PSJEZWx0YSBEZW50YWwgcGFydG5lciBpbiBLZW50dWNreSIgc3JjPSJpbWcvbG9nb3MvZGVsdGFkZW50YWwucG5nIi8+PC9hPgo8ZGl2IGNsYXNzPSJ2aXN1YWxseS1oaWRkZW4iPkRlbHRhIERlbnRhbCBpcyBvbmUgb2YgdGhlIG5hdGlvbuKAmXMgbGVhZGluZyBkZW50YWwgaW5zdXJhbmNlIHByb3ZpZGVycy4gUGhpbCBHcnVuZHkKICAgICAgICAgIEluc3VyYW5jZSBjb25uZWN0cyBmYW1pbGllcyBhbmQgYnVzaW5lc3NlcyBpbiBLZW50dWNreSB3aXRoIERlbHRhIERlbnRhbCBjb3ZlcmFnZS48L2Rpdj4KPC9wPgo8cD5EZWx0YSBEZW50YWw8L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwczovL3d3dy5iZWFtYmVuZWZpdHMuY29tLyI+PGltZyBhbHQ9IkJlYW0gRGVudGFsIFNvbWVyc2V0IEtZIiBzcmM9ImltZy9sb2dvcy9iZWFtLnBuZyIvPjwvYT4KPGRpdiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5CZWFtIERlbnRhbCBvZmZlcnMgc21hcnQgZGVudGFsIGNvdmVyYWdlIHNvbHV0aW9ucyB0aGF0IHJld2FyZCBwcmV2ZW50aXZlIGNhcmUuCiAgICAgICAgICBQaGlsIEdydW5keSBJbnN1cmFuY2Ugb2ZmZXJzIEJlYW0gcGxhbnMgdG8gY2xpZW50cyBhY3Jvc3MgS2VudHVja3kuPC9kaXY+CjwvcD4KPHA+QmVhbSBEZW50YWw8L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwczovL3d3dy5hZmxhYy5jb20vIj48aW1nIGFsdD0iQWZsYWMgc3VwcGxlbWVudGFsIGluc3VyYW5jZSBTb21lcnNldCBLWSIgc3JjPSJpbWcvbG9nb3MvYWZsYWMucG5nIi8+PC9hPgo8ZGl2IGNsYXNzPSJ2aXN1YWxseS1oaWRkZW4iPkFmbGFjIG9mZmVycyBzdXBwbGVtZW50YWwgaW5zdXJhbmNlIHBvbGljaWVzIHRoYXQgcGF5IGNhc2ggYmVuZWZpdHMgZGlyZWN0bHkuIFBoaWwKICAgICAgICAgIEdydW5keSBJbnN1cmFuY2UgaGVscHMgS2VudHVja3kgY3VzdG9tZXJzIGdldCB0aGUgY292ZXJhZ2UgdGhleSBuZWVkLjwvZGl2Pgo8L3A+CjxwPkFmbGFjPC9wPgo8L2Rpdj4KPGRpdiBjbGFzcz0iY29sLXNtLTMiPgo8cD4gPGEgaHJlZj0iaHR0cHM6Ly93d3cuYWxsc3RhdGUuY29tLyI+PGltZyBhbHQ9IkFsbHN0YXRlIEluc3VyYW5jZSBBZ2VudCBTb21lcnNldCBLWSIgc3JjPSJpbWcvbG9nb3MvYWxsc3RhdGUucG5nIi8+PC9hPgo8ZGl2IGNsYXNzPSJ2aXN1YWxseS1oaWRkZW4iPkFsbHN0YXRlIHBhcnRuZXJzIHdpdGggUGhpbCBHcnVuZHkgSW5zdXJhbmNlIHRvIG9mZmVyIHByb3BlcnR5LCBhdXRvLCBhbmQgbGlmZQogICAgICAgICAgaW5zdXJhbmNlIHNlcnZpY2VzIHRhaWxvcmVkIGZvciBTb21lcnNldCBhbmQgc3Vycm91bmRpbmcgYXJlYXMuPC9kaXY+CjwvcD4KPHA+QWxsIFN0YXRlPC9wPgo8L2Rpdj4KPC9kaXY+CjxkaXYgY2xhc3M9InJvdyBtYi14bCBjZW50ZXIiPgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwczovL3d3dy5rbGMub3JnLyI+PGltZyBhbHQ9IktlbnR1Y2t5IExlYWd1ZSBvZiBDaXRpZXMgSW5zdXJhbmNlIiBzcmM9ImltZy9sb2dvcy9LWS1sZWFndWUuanBnIi8+PC9hPgo8ZGl2IGNsYXNzPSJ2aXN1YWxseS1oaWRkZW4iPlBoaWwgR3J1bmR5IEluc3VyYW5jZSB3b3JrcyB3aXRoIHRoZSBLZW50dWNreSBMZWFndWUgb2YgQ2l0aWVzIHRvIHByb3ZpZGUgcHVibGljCiAgICAgICAgICBlbnRpdGllcyB3aXRoIHRoZSBpbnN1cmFuY2UgYW5kIGJlbmVmaXQgcHJvZ3JhbXMgdGhleSBuZWVkLjwvZGl2Pgo8L3A+CjxwPktMQzwvcD4KPC9kaXY+CjxkaXYgY2xhc3M9ImNvbC1zbS0zIj4KPHA+IDxhIGhyZWY9Imh0dHBzOi8vd3d3LmVtY25hdGlvbmFsbGlmZS5jb20vIj48aW1nIGFsdD0iRU1DIE5hdGlvbmFsIExpZmUgU29tZXJzZXQgS1kiIHNyYz0iaW1nL2xvZ29zL0VNQ19Mb2dvLnBuZyIvPjwvYT4KPGRpdiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5FTUMgTmF0aW9uYWwgTGlmZSBwYXJ0bmVycyB3aXRoIFBoaWwgR3J1bmR5IEluc3VyYW5jZSB0byBvZmZlciBsaWZlIGluc3VyYW5jZSBhbmQKICAgICAgICAgIGFubnVpdHkgcHJvZHVjdHMgdG8gaW5kaXZpZHVhbHMgYW5kIGJ1c2luZXNzZXMgdGhyb3VnaG91dCBLZW50dWNreS48L2Rpdj4KPC9wPgo8cD5FTUMgTGlmZTwvcD4KPC9kaXY+CjxkaXYgY2xhc3M9ImNvbC1zbS0zIj4KPHA+IDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNpbmZpbi5jb20vIj48aW1nIGFsdD0iQ2luY2lubmF0aSBMaWZlIEluc3VyYW5jZSBLWSIgc3JjPSJpbWcvbG9nb3MvY2luY2lsaWZlLnBuZyIvPjwvYT4KPGRpdiBjbGFzcz0idmlzdWFsbHktaGlkZGVuIj5DaW5jaW5uYXRpIExpZmUgb2ZmZXJzIGNvbXBldGl0aXZlIGFuZCBjdXN0b21pemFibGUgbGlmZSBpbnN1cmFuY2UgcHJvZHVjdHMuIFdvcmsKICAgICAgICAgIHdpdGggUGhpbCBHcnVuZHkgSW5zdXJhbmNlIGluIFNvbWVyc2V0IHRvIGZpbmQgYSBwb2xpY3kgdGhhdCBmaXRzIHlvdXIgZnV0dXJlLjwvZGl2Pgo8L3A+CjxwPkNpbmNpbm5hdGkgTGlmZTwvcD4KPC9kaXY+CjxkaXYgY2xhc3M9ImNvbC1zbS0zIj4KPHA+IDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNvbG9uaWFsbGlmZS5jb20vIj48aW1nIGFsdD0iQ29sb25pYWwgTGlmZSBwYXJ0bmVyIFNvbWVyc2V0IEtZIiBzcmM9ImltZy9sb2dvcy9jb2xvbmlhbC5wbmciLz48L2E+CjxkaXYgY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+Q29sb25pYWwgTGlmZSBwcm92aWRlcyB2b2x1bnRhcnkgYmVuZWZpdHMgaW5jbHVkaW5nIGRpc2FiaWxpdHksIGxpZmUsIGFuZCBjcml0aWNhbAogICAgICAgICAgaWxsbmVzcyBpbnN1cmFuY2UuIFBoaWwgR3J1bmR5IEluc3VyYW5jZSBoZWxwcyBjbGllbnRzIGluIEtZIGFjY2VzcyBDb2xvbmlhbCBMaWZlIGJlbmVmaXRzLjwvZGl2Pgo8L3A+CjxwPkNvbG9uaWFsIExpZmU8L3A+CjwvZGl2Pgo8L2Rpdj4KPGRpdiBjbGFzcz0icm93IG1iLXhsIGNlbnRlciI+CjxkaXYgY2xhc3M9ImNvbC1zbS0zIj4KPHA+IDxhIGhyZWY9Imh0dHBzOi8vd3d3LnN0YW5kYXJkLmNvbS8iPjxpbWcgYWx0PSJUaGUgU3RhbmRhcmQgSW5zdXJhbmNlIEtlbnR1Y2t5IiBzcmM9ImltZy9sb2dvcy9zdGFuZGFyZC5wbmciLz48L2E+CjxkaXYgY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+VGhlIFN0YW5kYXJkIGRlbGl2ZXJzIGVtcGxveWVlIGJlbmVmaXRzLCBkaXNhYmlsaXR5LCBhbmQgcmV0aXJlbWVudCBpbnN1cmFuY2UKICAgICAgICAgIHNvbHV0aW9ucy4gUGhpbCBHcnVuZHkgSW5zdXJhbmNlIHByb3VkbHkgb2ZmZXJzIFRoZSBTdGFuZGFyZCBwbGFucyBpbiBTb21lcnNldCBLWS48L2Rpdj4KPC9wPgo8cD5UaGUgU3RhbmRhcmQ8L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwczovL3d3dy50aGVoYXJ0Zm9yZC5jb20vIj48aW1nIGFsdD0iVGhlIEhhcnRmb3JkIEluc3VyYW5jZSBLZW50dWNreSIgc3JjPSJpbWcvbG9nb3MvaGFydGZvcmQucG5nIi8+PC9hPgo8ZGl2IGNsYXNzPSJ2aXN1YWxseS1oaWRkZW4iPlRoZSBIYXJ0Zm9yZCBpcyBhIGxlYWRpbmcgcHJvdmlkZXIgb2YgYnVzaW5lc3MgaW5zdXJhbmNlLCBncm91cCBiZW5lZml0cywgYW5kCiAgICAgICAgICBBQVJQLWVuZG9yc2VkIGF1dG8gYW5kIGhvbWUgY292ZXJhZ2UuIEF2YWlsYWJsZSB0aHJvdWdoIFBoaWwgR3J1bmR5IEluc3VyYW5jZSBpbiBLZW50dWNreS48L2Rpdj4KPC9wPgo8cD5UaGUgSGFydGZvcmQ8L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtc20tMyI+CjxwPiA8YSBocmVmPSJodHRwczovL3d3dy5ndWFyZGlhbmxpZmUuY29tLyI+PGltZyBhbHQ9Ikd1YXJkaWFuIExpZmUgSW5zdXJhbmNlIFNvbWVyc2V0IEtZIiBzcmM9ImltZy9sb2dvcy9ndWFyZGlhbi5wbmciLz48L2E+CjxkaXYgY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+R3VhcmRpYW4gTGlmZSBoZWxwcyBpbmRpdmlkdWFscyBhbmQgZW1wbG95ZXJzIHdpdGggZmluYW5jaWFsIHdlbGxuZXNzIHRocm91Z2ggbGlmZSwKICAgICAgICAgIGRpc2FiaWxpdHksIGRlbnRhbCwgYW5kIHZpc2lvbiBpbnN1cmFuY2UuIEFjY2VzcyBHdWFyZGlhbiBwbGFucyB3aXRoIFBoaWwgR3J1bmR5IEluc3VyYW5jZSBpbiBLWS48L2Rpdj4KPC9wPgo8cD5HdWFyZGlhbjwvcD4KPC9kaXY+CjwvZGl2Pgo8L2Rpdj4KPCEtLUNvbnRhY3QgRm9vdGVyIFNlY3Rpb24gU3RhcnQgIC0tPgo8Zm9vdGVyIGNsYXNzPSJjb2xvciBjb2xvci1zZWNvbmRhcnkiIGlkPSJmb290ZXIiPgo8ZGl2IGNsYXNzPSJjb250YWluZXIiPgo8ZGl2IGNsYXNzPSJyb3ciPgo8ZGl2IGNsYXNzPSJmb290ZXItcmliYm9uIj4gPHNwYW4+R2V0IGluIFRvdWNoPC9zcGFuPiA8L2Rpdj4KPGRpdiBjbGFzcz0iY29sLW1kLTYgY29sLWxnLTYiPgo8ZGl2IGNsYXNzPSJjb250YWN0LWRldGFpbHMiPgo8aDQ+Q29udGFjdCBVczwvaDQ+Cjx1bCBjbGFzcz0iY29udGFjdCI+CjxsaT4KPHA+PGkgY2xhc3M9ImZhIGZhLW1hcC1tYXJrZXIiPjwvaT4gPHN0cm9uZz5BZGRyZXNzOjwvc3Ryb25nPiAxMDQgTiBDZW50cmFsIEF2ZSwgU29tZXJzZXQsIEtZIDQyNTAzPC9wPgo8L2xpPgo8bGk+CiAgPHA+PGkgY2xhc3M9ImZhIGZhLXBob25lIj48L2k+IDxzdHJvbmc+UGhvbmU6PC9zdHJvbmc+CiAgICA8YSBocmVmPSJ0ZWw6KzE2MDY2NzkwMTU4Ij42MDYtNjc5LTAxNTg8L2E+CiAgPC9wPgo8L2xpPgoKPGxpPgo8cD48aSBjbGFzcz0iZmEgZmEtZmlsZS10ZXh0LW8iPjwvaT4gPHN0cm9uZz5GYXg6PC9zdHJvbmc+IDYwNi02NzktMTIzNDwvcD4KPC9saT4KPGxpPgo8cD48aSBjbGFzcz0iZmEgZmEtZW52ZWxvcGUiPjwvaT4gPHN0cm9uZz5FbWFpbDo8L3N0cm9uZz4gPGEgaHJlZj0ibWFpbHRvOmtyb3NzQGdydW5keWluc3VyYW5jZS5uZXQiPmtyb3NzQGdydW5keWluc3VyYW5jZS5uZXQ8L2E+PC9wPgo8L2xpPgo8L3VsPgo8L2Rpdj4KPC9kaXY+CjxkaXYgYWxpZ249InJpZ2h0IiBjbGFzcz0iY29sLW1kLTYgY29sLWxnLTYiPgo8YSBocmVmPSJjb250YWN0Lmh0bWwiPgo8YnV0dG9uIGNsYXNzPSJidG4gYnRuLW91dGxpbmUgYnRuLXJvdW5kZWQgYnRuLXN1Y2Nlc3MgbWItMiIgdHlwZT0iYnV0dG9uIj5SZXF1ZXN0IGEgRnJlZSBRdW90ZTwvYnV0dG9uPgo8L2E+CjwvZGl2Pgo8L2Rpdj4KPC9kaXY+CjxkaXYgY2xhc3M9ImZvb3Rlci1jb3B5cmlnaHQiPgo8ZGl2IGNsYXNzPSJjb250YWluZXIiPgo8ZGl2IGNsYXNzPSJyb3ciPgo8ZGl2IGNsYXNzPSJjb2wtbWQtOCI+CjxwPsKpIENvcHlyaWdodCAyMDI2LiBBbGwgUmlnaHRzIFJlc2VydmVkLjxici8+CjxhIGhyZWY9Imh0dHBzOi8vYXBleC1raW5nLWRpZ2l0YWwubmV0bGlmeS5hcHAvIiB0aXRsZT0iQXBleCBLaW5nIERpZ2l0YWwiPjxzcGFuIHN0eWxlPSJjb2xvcjojNzc3O2ZvbnQtc2l6ZToxMHB4OyI+QXBleCBLaW5nIERpZ2l0YWw8L3NwYW4+PC9hPgo8L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb2wtbWQtNCI+CjxuYXYgaWQ9InN1Yi1tZW51Ij4KPHVsPgo8bGk+PGEgaHJlZj0icHJpdmFjeS5odG1sIj5Qcml2YWN5IFN0YXRlbWVudDwvYT48L2xpPgo8L3VsPgo8L25hdj4KPC9kaXY+CjwvZGl2Pgo8L2Rpdj4KPC9kaXY+CjwvZm9vdGVyPgo8IS0tIENvbnRhY3QgRm9vdGVyIFNlY3Rpb24gRW5kIC0tPgo8IS0tIFZlbmRvciAtLT4KPCEtLSBNRU5VIC0tPgo8c2NyaXB0IHNyYz0iYXNzZXRzL2pzL2pxdWVyeS5taW4uanMiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0iYXNzZXRzL2pzL3NrZWwubWluLmpzIj48L3NjcmlwdD4KPHNjcmlwdCBzcmM9ImFzc2V0cy9qcy91dGlsLmpzIj48L3NjcmlwdD4KPCEtLVtpZiBsdGUgSUUgOF0+PHNjcmlwdCBzcmM9ImFzc2V0cy9qcy9pZS9yZXNwb25kLm1pbi5qcyI+PC9zY3JpcHQ+PCFbZW5kaWZdLS0+CjxzY3JpcHQgc3JjPSJhc3NldHMvanMvbWFpbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvanF1ZXJ5LmFwcGVhci9qcXVlcnkuYXBwZWFyLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvanF1ZXJ5LmVhc2luZy9qcXVlcnkuZWFzaW5nLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvanF1ZXJ5LWNvb2tpZS9qcXVlcnktY29va2llLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvYm9vdHN0cmFwL2pzL2Jvb3RzdHJhcC5taW4uanMiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0idmVuZG9yL2NvbW1vbi9jb21tb24ubWluLmpzIj48L3NjcmlwdD4KPHNjcmlwdCBzcmM9InZlbmRvci9qcXVlcnkudmFsaWRhdGlvbi9qcXVlcnkudmFsaWRhdGlvbi5taW4uanMiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0idmVuZG9yL2pxdWVyeS5zdGVsbGFyL2pxdWVyeS5zdGVsbGFyLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvanF1ZXJ5LmVhc3ktcGllLWNoYXJ0L2pxdWVyeS5lYXN5LXBpZS1jaGFydC5taW4uanMiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0idmVuZG9yL2pxdWVyeS5nbWFwL2pxdWVyeS5nbWFwLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvanF1ZXJ5Lmxhenlsb2FkL2pxdWVyeS5sYXp5bG9hZC5taW4uanMiPjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0idmVuZG9yL2lzb3RvcGUvanF1ZXJ5Lmlzb3RvcGUubWluLmpzIj48L3NjcmlwdD4KPHNjcmlwdCBzcmM9InZlbmRvci9vd2wuY2Fyb3VzZWwvb3dsLmNhcm91c2VsLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvbWFnbmlmaWMtcG9wdXAvanF1ZXJ5Lm1hZ25pZmljLXBvcHVwLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvdmlkZS92aWRlLm1pbi5qcyI+PC9zY3JpcHQ+CjwhLS0gVGhlbWUgQmFzZSwgQ29tcG9uZW50cyBhbmQgU2V0dGluZ3MgLS0+CjxzY3JpcHQgc3JjPSJqcy90aGVtZS5qcyI+PC9zY3JpcHQ+CjwhLS0gQ3VycmVudCBQYWdlIFZlbmRvciBhbmQgVmlld3MgLS0+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvcnMtcGx1Z2luL2pzL2pxdWVyeS50aGVtZXB1bmNoLnRvb2xzLm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJ2ZW5kb3IvcnMtcGx1Z2luL2pzL2pxdWVyeS50aGVtZXB1bmNoLnJldm9sdXRpb24ubWluLmpzIj48L3NjcmlwdD4KPHNjcmlwdCBzcmM9InZlbmRvci9jaXJjbGUtZmxpcC1zbGlkZXNob3cvanMvanF1ZXJ5LmZsaXBzaG93Lm1pbi5qcyI+PC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJqcy92aWV3cy92aWV3LmhvbWUuanMiPjwvc2NyaXB0Pgo8IS0tIFRoZW1lIEN1c3RvbSAtLT4KCjwhLS0gVGhlbWUgSW5pdGlhbGl6YXRpb24gRmlsZXMgLS0+CjxzY3JpcHQgc3JjPSJqcy90aGVtZS5pbml0LmpzIj48L3NjcmlwdD4KPHNjcmlwdD4KICAgIHZhciBzbGlkZUluZGV4ID0gMDsKICAgIHNob3dTbGlkZXMoKTsKCiAgICBmdW5jdGlvbiBzaG93U2xpZGVzKCkgewogICAgICB2YXIgaTsKICAgICAgdmFyIHNsaWRlcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoIm15U2xpZGVzIik7CiAgICAgIGZvciAoaSA9IDA7IGkgPCBzbGlkZXMubGVuZ3RoOyBpKyspIHsKICAgICAgICBzbGlkZXNbaV0uc3R5bGUuZGlzcGxheSA9ICJub25lIjsKICAgICAgfQogICAgICBzbGlkZUluZGV4Kys7CiAgICAgIGlmIChzbGlkZUluZGV4ID4gc2xpZGVzLmxlbmd0aCkgeyBzbGlkZUluZGV4ID0gMSB9CiAgICAgIHNsaWRlc1tzbGlkZUluZGV4IC0gMV0uc3R5bGUuZGlzcGxheSA9ICJibG9jayI7CiAgICAgIHNldFRpbWVvdXQoc2hvd1NsaWRlcywgNDAwMCk7IC8vIENoYW5nZSBpbWFnZSBldmVyeSA2IHNlY29uZHMKICAgIH0KICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Insurance Companies in Somerset KY | Grundy Insurance Partners</title>
+  
+  <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TVQ9ZV5K');</script>
+<!-- End Google Tag Manager -->
+<!-- Basic Meta Tags -->
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="Phil Grundy Insurance in Somerset, KY partners with trusted providers to offer reliable health, life, and group insurance services. Explore our partnerships ..." name="description"/>
+<meta content="Phil Grundy Insurance, Somerset KY" name="author"/>
+<meta content="Phil Grundy Insurance, Anthem Insurance, United Health Insurance, KY League of Cities Insurance, health insurance, life insurance, business insurance, Medicare insurance,  KYNECT, KY Insurance Provider, Grundy Insurance,Medicaid insurance, group insurance, insurance providers Somerset KY, Kentucky insurance, trusted insurance providers" name="keywords"/>
+<!-- Open Graph Meta Tags (Social Media Sharing) -->
+<meta content="Partner Companies - Phil Grundy Insurance" property="og:title"/>
+<meta content="Explore trusted insurance partners in health, life, and group insurance with Phil Grundy Insurance, Somerset, KY." property="og:description"/>
+<meta content="img/pgilogo.png" property="og:image"/>
+<meta content="https://grundyinsurance.net/our-insurance-providers.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Canonical -->
+<link rel="canonical" href="https://www.grundyinsurance.net/our-insurance-providers.html">
+  
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insurance Companies in Somerset KY | Grundy Insurance Partners">
+<meta property="og:description" content="Explore trusted insurance companies in Somerset KY through Grundy Insurance's strong partnerships.">
+<meta property="og:url" content="https://www.grundyinsurance.net/our-insurance-providers.html">
+<meta property="og:image" content="https://www.grundyinsurance.net/assets/og-default.jpg">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Meta description using target keyword -->
+<meta name="description" content="Find the top insurance companies in Somerset KY with Grundy Insurance. We partner with trusted carriers to provide auto, home, life, and business insurance.">
+<!-- Mobile Metas -->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<!-- Web Fonts  -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<!-- Vendor CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="vendor/simple-line-icons/css/simple-line-icons.min.css" rel="stylesheet"/>
+<link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+<link href="vendor/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet"/>
+<link href="vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet"/>
+<!-- Theme CSS -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/theme-elements.css" rel="stylesheet"/>
+<link href="css/theme-animate.css" rel="stylesheet"/>
+<!-- Current Page CSS -->
+<link href="vendor/rs-plugin/css/settings.css" media="screen" rel="stylesheet"/>
+<link href="vendor/rs-plugin/css/layers.css" media="screen" rel="stylesheet"/>
+<link href="vendor/rs-plugin/css/navigation.css" media="screen" rel="stylesheet"/>
+<link href="vendor/circle-flip-slideshow/css/component.css" media="screen" rel="stylesheet"/>
+<!-- Skin CSS -->
+<link href="css/skins/skin-corporate-6.css" rel="stylesheet"/>
+<!-- Head Libs -->
+<script src="bootstrap/js/jquery.js" type="text/javascript"></script>
+<script src="vendor/modernizr/modernizr.min.js"></script>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<!-- Theme Custom CSS -->
+<link href="css/custom.css" rel="stylesheet"/>
+<style type="text/css">
+    .container1 {
+      outline: 1px dashed #999;
+    }
+
+    .container1 {
+      width: 1170px !important;
+    }
+
+    .container-fluid1 {
+      outline: 1px dashed #999;
+    }
+
+    .row1 {
+      margin-left: -20px;
+    }
+  </style>
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<link href="https://www.grundyinsurance.net/our-insurance-providers.html" rel="canonical"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Grundy Insurance",
+  "url": "https://www.grundyinsurance.net/our-insurance-providers.html",
+  "telephone": "+1-606-679-0158",
+  "faxNumber": "+1-606-679-1234",
+  "email": "kross@grundyinsurance.net",
+  "areaServed": "KY",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "104 N Central Ave",
+    "addressLocality": "Somerset",
+    "addressRegion": "KY",
+    "postalCode": "42503",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.092,
+    "longitude": -84.604
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "sameAs": [
+    "https://www.facebook.com/grundyinsurance",
+    "https://www.google.com/maps/place/104+N+Central+Ave,+Somerset,+KY+42503"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.grundyinsurance.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pgi",
+      "item": "https://www.grundyinsurance.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Our Insurance Providers.Html",
+      "item": "https://www.grundyinsurance.net/our-insurance-providers.html/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.grundyinsurance.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Partners",
+        "item": "https://www.grundyinsurance.net/our-insurance-providers.html"
+      }
+    ]
+  }
+  </script>
+<script>
+(function(d){
+  var s = d.createElement('script');
+  s.src='https://cdn.userway.org/widget.js';
+  s.setAttribute('data-account', 'kE7HhZfU5B');
+  s.async = true;
+  d.getElementsByTagName('head')[0].appendChild(s);
+})(document)
+</script>
+
+<script data-account="kE7HhZfU5B" src="https://cdn.userway.org/widget.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TVQ9ZV5K" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Open Enrollment banner (remove after Jan 2027) -->
+<div id="oe-banner" style="background:#00548E;color:#fff;text-align:center;padding:10px 45px 10px 15px;font-size:15px;position:relative;z-index:1000;line-height:1.4;">
+  <strong>Open Enrollment starts October 15th</strong> &mdash; Compare Kynect health plans for 2027 with a local Somerset expert, free.
+  <a href="kynect.html" style="color:#fff;text-decoration:underline;font-weight:bold;white-space:nowrap;">Get free enrollment help &rarr;</a>
+  <button onclick="document.getElementById('oe-banner').style.display='none'" aria-label="Dismiss announcement" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:22px;cursor:pointer;line-height:1;">&times;</button>
+</div>
+<!-- Schema Markup -->
+<div class="body">
+<header>
+<!-- Header -->
+<header class="alt" id="header">
+<h1><a href="index.html"><img alt="Phil Grundy Insurance" height="57" src="img/pgilogo.png" width="400"/></a>
+<span class="visually-hidden">Insurance company partners of Phil Grundy Insurance</span>
+</h1>
+<a href="#nav"><i class="fa fa-bars"></i> Menu</a>
+</header>
+<!-- Nav -->
+<nav id="nav">
+<ul class="links">
+<li><a href="index.html">Home</a></li>
+<li><a href="insurance.html">Insurance We Offer</a></li>
+<li><a href="kynect.html">Kynect</a></li>
+<li><a href="group.html">Group Insurance</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="our-insurance-providers.html">Partner Companies</a></li>
+<li><a href="staff.html">Our Team</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header></div>
+<div class="main" role="main">
+<section class="page-header">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>Partner Companies</h2>
+</div>
+</div>
+</div>
+</section>
+<div class="container">
+<div class="col-md-12">
+<p>Phil Grundy Insurance partners with a carefully selected group of top-rated insurance companies that serve
+          individuals, families, and businesses throughout Kentucky. Our goal is to provide you with reliable and
+          affordable insurance solutions—whether you need health, life, dental, group, or supplemental coverage. We're
+          proud to work with national and regional providers to bring peace of mind to Somerset and the surrounding
+          communities.</p>
+<p>We are also proud members of the <a href="https://somersetpulaskichamber.com/" rel="noopener" target="_blank">Somerset Pulaski Chamber of Commerce</a>.</p>
+<p> </p>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row mb-xl center">
+<div class="col-sm-3">
+<p><a href="https://www.anthem.com/"><img alt="Anthem health insurance partner Somerset Kentucky" src="img/logos/anthem.png"/></a>
+<div class="visually-hidden">Anthem offers trusted health insurance options across Kentucky. Phil Grundy
+          Insurance is proud to be a licensed agent helping you access Anthem coverage plans in Somerset and beyond.
+        </div>
+</p>
+<p>Anthem</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="http://www.uhc.com/"><img alt="United Health Care Kentucky partner" src="img/logos/uhc.png"/></a>
+<div class="visually-hidden">United Health Care partners with Phil Grundy Insurance to offer affordable and
+          comprehensive medical coverage options to Kentucky residents.</div>
+</p>
+<p>United Health Care</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.caresource.com/"><img alt="Care Source health insurance Kentucky" src="img/logos/caresource.png"/></a>
+<div class="visually-hidden">CareSource is a nonprofit managed health care provider serving individuals and
+          families in Kentucky. Find CareSource plans through Phil Grundy Insurance.</div>
+</p>
+<p>Care Source</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.anglehealth.com/"><img alt="Angle Health Insurance Kentucky" src="img/logos/angle.png"/></a>
+<div class="visually-hidden">Angle Health delivers digital-first health plans for modern individuals and
+          businesses. Phil Grundy Insurance helps clients in Kentucky connect with Angle Health options.</div>
+</p>
+<p>Angle Health</p>
+</div>
+</div>
+<div class="row mb-xl center">
+<div class="col-sm-3">
+<p> <a href="https://www.deltadental.com/"><img alt="Delta Dental partner in Kentucky" src="img/logos/deltadental.png"/></a>
+<div class="visually-hidden">Delta Dental is one of the nation’s leading dental insurance providers. Phil Grundy
+          Insurance connects families and businesses in Kentucky with Delta Dental coverage.</div>
+</p>
+<p>Delta Dental</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.beambenefits.com/"><img alt="Beam Dental Somerset KY" src="img/logos/beam.png"/></a>
+<div class="visually-hidden">Beam Dental offers smart dental coverage solutions that reward preventive care.
+          Phil Grundy Insurance offers Beam plans to clients across Kentucky.</div>
+</p>
+<p>Beam Dental</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.aflac.com/"><img alt="Aflac supplemental insurance Somerset KY" src="img/logos/aflac.png"/></a>
+<div class="visually-hidden">Aflac offers supplemental insurance policies that pay cash benefits directly. Phil
+          Grundy Insurance helps Kentucky customers get the coverage they need.</div>
+</p>
+<p>Aflac</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.allstate.com/"><img alt="Allstate Insurance Agent Somerset KY" src="img/logos/allstate.png"/></a>
+<div class="visually-hidden">Allstate partners with Phil Grundy Insurance to offer property, auto, and life
+          insurance services tailored for Somerset and surrounding areas.</div>
+</p>
+<p>All State</p>
+</div>
+</div>
+<div class="row mb-xl center">
+<div class="col-sm-3">
+<p> <a href="https://www.klc.org/"><img alt="Kentucky League of Cities Insurance" src="img/logos/KY-league.jpg"/></a>
+<div class="visually-hidden">Phil Grundy Insurance works with the Kentucky League of Cities to provide public
+          entities with the insurance and benefit programs they need.</div>
+</p>
+<p>KLC</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.emcnationallife.com/"><img alt="EMC National Life Somerset KY" src="img/logos/EMC_Logo.png"/></a>
+<div class="visually-hidden">EMC National Life partners with Phil Grundy Insurance to offer life insurance and
+          annuity products to individuals and businesses throughout Kentucky.</div>
+</p>
+<p>EMC Life</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.cinfin.com/"><img alt="Cincinnati Life Insurance KY" src="img/logos/cincilife.png"/></a>
+<div class="visually-hidden">Cincinnati Life offers competitive and customizable life insurance products. Work
+          with Phil Grundy Insurance in Somerset to find a policy that fits your future.</div>
+</p>
+<p>Cincinnati Life</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.coloniallife.com/"><img alt="Colonial Life partner Somerset KY" src="img/logos/colonial.png"/></a>
+<div class="visually-hidden">Colonial Life provides voluntary benefits including disability, life, and critical
+          illness insurance. Phil Grundy Insurance helps clients in KY access Colonial Life benefits.</div>
+</p>
+<p>Colonial Life</p>
+</div>
+</div>
+<div class="row mb-xl center">
+<div class="col-sm-3">
+<p> <a href="https://www.standard.com/"><img alt="The Standard Insurance Kentucky" src="img/logos/standard.png"/></a>
+<div class="visually-hidden">The Standard delivers employee benefits, disability, and retirement insurance
+          solutions. Phil Grundy Insurance proudly offers The Standard plans in Somerset KY.</div>
+</p>
+<p>The Standard</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.thehartford.com/"><img alt="The Hartford Insurance Kentucky" src="img/logos/hartford.png"/></a>
+<div class="visually-hidden">The Hartford is a leading provider of business insurance, group benefits, and
+          AARP-endorsed auto and home coverage. Available through Phil Grundy Insurance in Kentucky.</div>
+</p>
+<p>The Hartford</p>
+</div>
+<div class="col-sm-3">
+<p> <a href="https://www.guardianlife.com/"><img alt="Guardian Life Insurance Somerset KY" src="img/logos/guardian.png"/></a>
+<div class="visually-hidden">Guardian Life helps individuals and employers with financial wellness through life,
+          disability, dental, and vision insurance. Access Guardian plans with Phil Grundy Insurance in KY.</div>
+</p>
+<p>Guardian</p>
+</div>
+</div>
+</div>
+<!--Contact Footer Section Start  -->
+<footer class="color color-secondary" id="footer">
+<div class="container">
+<div class="row">
+<div class="footer-ribbon"> <span>Get in Touch</span> </div>
+<div class="col-md-6 col-lg-6">
+<div class="contact-details">
+<h4>Contact Us</h4>
+<ul class="contact">
+<li>
+<p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 104 N Central Ave, Somerset, KY 42503</p>
+</li>
+<li>
+  <p><i class="fa fa-phone"></i> <strong>Phone:</strong>
+    <a href="tel:+16066790158">606-679-0158</a>
+  </p>
+</li>
+
+<li>
+<p><i class="fa fa-file-text-o"></i> <strong>Fax:</strong> 606-679-1234</p>
+</li>
+<li>
+<p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:kross@grundyinsurance.net">kross@grundyinsurance.net</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div align="right" class="col-md-6 col-lg-6">
+<a href="contact.html">
+<button class="btn btn-outline btn-rounded btn-success mb-2" type="button">Request a Free Quote</button>
+</a>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<p>© Copyright 2026. All Rights Reserved.<br/>
+<a href="https://apex-king-digital.netlify.app/" title="Apex King Digital"><span style="color:#777;font-size:10px;">Apex King Digital</span></a>
+</p>
+</div>
+<div class="col-md-4">
+<nav id="sub-menu">
+<ul>
+<li><a href="privacy.html">Privacy Statement</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Contact Footer Section End -->
+<!-- Vendor -->
+<!-- MENU -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/common/common.min.js"></script>
+<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
+<script src="vendor/jquery.stellar/jquery.stellar.min.js"></script>
+<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+<script src="vendor/isotope/jquery.isotope.min.js"></script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/vide/vide.min.js"></script>
+<!-- Theme Base, Components and Settings -->
+<script src="js/theme.js"></script>
+<!-- Current Page Vendor and Views -->
+<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+<script src="js/views/view.home.js"></script>
+<!-- Theme Custom -->
+
+<!-- Theme Initialization Files -->
+<script src="js/theme.init.js"></script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 6 seconds
+    }
+  </script>
+</body>
+</html>
